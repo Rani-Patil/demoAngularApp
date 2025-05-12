@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
+import { UserData } from './user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  public API = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&page_type=DESKTOP_WEB_LISTING'; // or your real backend
-
+  public API = "https://jsonplaceholder.typicode.com/posts/1";
   constructor(private http: HttpClient) {
 
    }
    
-   getAll(): Observable<any> {
-    return this.http.get(this.API);
+  getUserDetails(): Observable<any> {
+    return this.http.get<UserData>(this.API);
   }
 }

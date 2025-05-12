@@ -1,10 +1,10 @@
 {
-    "/swiggy-api": {
-      "target": "https://www.swiggy.com",
+    "/api": {
+      "target": "https://www.swiggy.com/",
       "secure": true,
       "changeOrigin": true,
       "pathRewrite": {
-        "^/swiggy-api": ""
+        "^/api": ""
       }
     }
   }

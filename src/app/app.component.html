@@ -1,13 +1,18 @@
 <!-- navigation -->
 <header>
-  <nav class="navigation">
-    <a routerLink="" routerLinkActive="active">Home</a>
-    <a routerLink="/page/product" routerLinkActive="active">Product</a>
-    <a routerLink="/page/about" routerLinkActive="active">About</a>
-    <a routerLink="/page/contact" routerLinkActive="active">Contact</a>
-  </nav>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <nav class="navigation">
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="/page/product" routerLinkActive="active">Product</a>
+        <a routerLink="/page/about" routerLinkActive="active">About</a>
+        <a routerLink="/page/contact" routerLinkActive="active">Contact</a>
+      </nav>
+      <!-- <span class="example-spacer"></span> -->
+      <!-- <mat-icon class="example-icon">favorite</mat-icon> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
 </header>
-
 <div class="layout-container">
   <router-outlet></router-outlet>
 </div>

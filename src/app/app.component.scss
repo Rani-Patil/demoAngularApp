@@ -1,12 +1,26 @@
 header {
-    padding:  20px 10px;
     .navigation {
         a {
             padding: 2px 6px;
             margin-right: 2px;
             cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            font-size: medium;
+
+            &:active, &.active {
+                color: yellow;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
+}
+
+.active {
+    color: yellow;
 }
 
 .layout-container {

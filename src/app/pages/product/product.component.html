@@ -1,2 +1,22 @@
-//TO DO layout called api for Restaurants
-<p>product works!</p>
+<h4 *ngIf="pageTitle">
+  {{ pageTitle | titleCase }}
+</h4>
+<div class="user-content">
+    <mat-card *ngIf="userData" class="bg-white" >
+        <mat-card-header>
+          <mat-card-title *ngIf="userData.title" >{{ userData.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p *ngIf="userData.body">
+                {{ userData.body }}
+            </p>
+          </mat-card-content>
+    </mat-card>
+
+    <div class="input-wrapper">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name: </mat-label>
+        <input [formControl]="name" matInput placeholder="Enter Name" value="">
+      </mat-form-field>
+    </div>
+</div>
